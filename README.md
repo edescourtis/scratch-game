@@ -1,4 +1,5 @@
 # Scratch Game – Reference Implementation
+[![codecov](https://codecov.io/gh/edescourtis/scratch-game/branch/main/graph/badge.svg)](https://codecov.io/gh/edescourtis/scratch-game)
 
 A command-line lottery / scratch-card simulator written in **Java 17** with **Maven**. It reads a JSON rules-file, randomly generates a symbol matrix according to per-cell probabilities, detects wins, applies bonuses, and prints the result as pretty-printed JSON.
 
