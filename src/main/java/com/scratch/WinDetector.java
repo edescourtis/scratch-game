@@ -1,6 +1,11 @@
 package com.scratch;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 /** Detects winning combinations in a generated matrix. Immutable and stateless. */
 final class WinDetector {
@@ -25,8 +30,7 @@ final class WinDetector {
     return m.stream()
         .flatMap(List::stream)
         .filter(cfg.standard()::containsKey)
-        .collect(
-            java.util.stream.Collectors.groupingBy(e -> e, java.util.stream.Collectors.counting()));
+        .collect(Collectors.groupingBy(e -> e, Collectors.counting()));
   }
 
   private void applySameSymbolRules(Map<String, Long> counts, Map<String, List<String>> acc) {

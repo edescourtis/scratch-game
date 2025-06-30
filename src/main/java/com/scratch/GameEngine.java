@@ -5,8 +5,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
 
-import com.scratch.GenerationResult;
-
 /**
  * Core game logic for the Scratch Game.<br>
  *
@@ -100,7 +98,4 @@ final class GameEngine {
     return b.applyImpact(reward);
   }
 
-  private String extractBonusSymbol(List<List<String>> matrix) {
-    return null; // unused after refactor
-  }
 }
